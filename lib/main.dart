@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:flutter/cupertino.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,7 +53,7 @@ TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
     final loginButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30),
-      color: Colors.deepOrange,
+      color: Colors.teal[400],
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
@@ -70,14 +71,14 @@ TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
         child: Container(
           color: Colors.white,
           child: Padding(
-            const EdgeInsets.all(36),
+            padding: const EdgeInsets.all(36),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
                   height: 155,
-                  child: Image.asset("asssets/logo.png",
+                  child: Image.asset("lib/assets/logo.png",
                   fit: BoxFit.contain,),
                 ),
                 SizedBox(height: 45),
@@ -85,6 +86,8 @@ TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
                 SizedBox(height: 25,),
                 passwordField,
                 SizedBox(height: 15,),
+                loginButon,
+                SizedBox(height: 15,)
               ],),
           ),
         ),
